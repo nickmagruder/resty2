@@ -3,11 +3,11 @@ import React from 'react';
 function History({ requests }) {
   return (
     <div>
-      {requests.map(request => {
+      {requests.map (request => {
         return (
           <p>
-            <span>URL : {request.url}</span><br />
-            <span>METHOD : {request.method}</span>
+            <span>METHOD : {request.method}</span><br />
+            <span>URL : {request.url}</span>
           </p>
         )
       })}
