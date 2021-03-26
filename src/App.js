@@ -24,9 +24,12 @@ class App extends React.Component {
     }
   }
 
-  componentDidMount() {
-    this.setState({ history: JSON.parse(localStorage.getItem('history')) });
-  }
+   componentDidMount() {
+     async function getHistory() {
+      await { history: JSON.parse(localStorage.getItem('history')) };
+     }
+     this.setState(getHistory());
+  } 
 
   handleRequest = (request) => {
 
@@ -43,7 +46,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Form handleRequest={this.handleRequest} hisory={this.state.history} />
+        <Form handleRequest={this.handleRequest} history={this.state.history} />
         <If condition={isObjectEmpty(this.state.request)}>
           <Results request={this.state.request} />
         </If>

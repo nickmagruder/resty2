@@ -33,14 +33,14 @@ class Form extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>URL
+        <label>Enter an API URL:
           <input onChange={this.handleChange} type="text" value={this.state.url} name="url" />
         </label><br></br>
-        <label >METHOD
-          <input onChange={this.handleChange} type="radio" value="GET" name="method" />
-          <input onChange={this.handleChange} type="radio" value="POST" name="method" />
-          <input onChange={this.handleChange} type="radio" value="PUT" name="method" />
-          <input onChange={this.handleChange} type="radio" value="DELETE" name="method" />
+        <label> Method <br></br>
+          <input onChange={this.handleChange} type="radio" value="GET" name="method" /> GET <br></br>
+          <input onChange={this.handleChange} type="radio" value="POST" name="method" /> POST <br></br>
+          <input onChange={this.handleChange} type="radio" value="PUT" name="method" /> PUT <br></br>
+          <input onChange={this.handleChange} type="radio" value="DELETE" name="method" /> DELETE <br></br>
         </label><br></br>
         <button type="submit">GO!</button>
       </form>
