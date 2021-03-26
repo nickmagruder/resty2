@@ -5,15 +5,6 @@ import Form from './components/form/Form.js';
 import History from './components/history/History.js';
 import './App.css';
 
-// DTO
-// class Request {
-//   constructor() {
-//     this.url = null;
-//     this.method = null;
-//     this.body = null;
-//     this.error = null;
-//   }
-// }
 
 class App extends React.Component {
   constructor() {
